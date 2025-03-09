@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    padding: 2.1875rem;
+    font-size: $fs-global;
+    font-weight: 500;
+    font-family: $body-font;
+    background-color: $light-purple;
+}
+  
+h1, h2, h3, p {
+    margin: 0;
+}
+
+
+
+

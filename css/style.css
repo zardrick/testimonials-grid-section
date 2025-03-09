@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2.1875rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(260, 100%, 95%);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.testimonial-grid {
+  margin: 2.375rem auto;
+  max-width: 32rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.testimonial-grid .testimonial {
+  padding: 2rem;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.3);
+}
+.testimonial-grid .testimonial--purple {
+  background-color: hsl(263, 55%, 52%);
+}
+.testimonial-grid .testimonial--purple .testimonial__name {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--purple .testimonial__status {
+  color: hsl(0, 0%, 81%);
+}
+.testimonial-grid .testimonial--purple .testimonial__title {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--purple .testimonial__content {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--purple .testimonial__avatar {
+  border: 2px solid hsl(264, 82%, 80%);
+}
+.testimonial-grid .testimonial--gray {
+  background-color: hsl(217, 19%, 35%);
+}
+.testimonial-grid .testimonial--gray .testimonial__name {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--gray .testimonial__status {
+  color: hsl(0, 0%, 81%);
+}
+.testimonial-grid .testimonial--gray .testimonial__title {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--gray .testimonial__content {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--gray .testimonial__avatar {
+  border: 2px solid hsl(0, 0%, 81%);
+}
+.testimonial-grid .testimonial--white {
+  background-color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--white .testimonial__name {
+  color: hsl(217, 19%, 35%);
+}
+.testimonial-grid .testimonial--white .testimonial__status {
+  color: hsl(224, 10%, 45%);
+}
+.testimonial-grid .testimonial--white .testimonial__title {
+  color: hsl(217, 19%, 35%);
+}
+.testimonial-grid .testimonial--white .testimonial__content {
+  color: hsl(224, 10%, 45%);
+}
+.testimonial-grid .testimonial--white .testimonial__avatar {
+  border: 0 solid transparent;
+}
+.testimonial-grid .testimonial--blue {
+  background-color: hsl(217, 30%, 14%);
+}
+.testimonial-grid .testimonial--blue .testimonial__name {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--blue .testimonial__status {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--blue .testimonial__title {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--blue .testimonial__content {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial-grid .testimonial--blue .testimonial__avatar {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+.testimonial-grid .testimonial .testimonial__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.testimonial-grid .testimonial .testimonial__header .testimonial__avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonial-grid .testimonial .testimonial__header .testimonial__name {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+.testimonial-grid .testimonial .testimonial__header .testimonial__status {
+  font-size: 0.6875rem;
+}
+.testimonial-grid .testimonial .testimonial__title {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-grid .testimonial .testimonial__quotation {
+  width: 6.5rem;
+  height: 6.375rem;
+  position: absolute;
+  top: 0;
+  right: 4rem;
+  z-index: 0;
+  display: none;
+}
+
+@media (min-width: 65rem) {
+  .testimonial-grid {
+    margin: auto;
+    max-width: 70rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+    gap: 1.5rem 2rem;
+  }
+  .testimonial-grid .testimonial--purple {
+    grid-area: daniel;
+  }
+  .testimonial-grid .testimonial--gray {
+    grid-area: jonathan;
+  }
+  .testimonial-grid .testimonial--white:nth-of-type(1) {
+    grid-area: jeanette;
+  }
+  .testimonial-grid .testimonial--blue {
+    grid-area: patrick;
+  }
+  .testimonial-grid .testimonial--white:last-of-type {
+    grid-area: kira;
+  }
+  .testimonial-grid .testimonial .testimonial__quotation {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

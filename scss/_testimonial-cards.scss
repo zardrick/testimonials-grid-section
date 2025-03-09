@@ -1,0 +1,107 @@
+@use 'variables' as *;
+
+@mixin testimonial-theme($bg, $name, $status, $title, $content, $border-width, $border-color) {
+
+    background-color: $bg;
+    
+    .testimonial__name {
+        color: $name;
+    }
+    .testimonial__status {
+        color: $status;
+    }
+    .testimonial__title {
+        color: $title;
+    }
+    .testimonial__content {
+        color: $content;
+    }
+    .testimonial__avatar {
+        border: $border-width solid $border-color;
+    }
+}
+
+.testimonial-grid {
+    margin: 2.375rem auto;
+    max-width: 32rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .testimonial {
+        padding: 2rem;
+        position: relative;
+        border-radius: 0.5rem;
+        box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.3);
+    
+        &--purple { @include testimonial-theme($dark-purple, $white, $gray-200, $white, $white, 2px, $medium-purple); }
+        &--gray { @include testimonial-theme($dark-gray, $white, $gray-200, $white, $white, 2px, $gray-200); }
+        &--white { @include testimonial-theme($white, $dark-gray, $gray-400, $dark-gray, $gray-400, 0, transparent); }
+        &--blue { @include testimonial-theme($dark-blue, $white, $white, $white, $white, 2px, $dark-purple); }
+    
+        .testimonial__header {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        
+            .testimonial__avatar {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .testimonial__name {
+                font-size: $fs-global;
+                font-weight: 500;
+            }
+            .testimonial__status {
+                font-size: $fs-small;
+            }
+        }
+
+        .testimonial__title {
+            margin: 1rem 0;
+            font-size: $fs-big;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial__quotation {
+            width: 6.5rem;
+            height: 6.375rem;
+            position: absolute;
+            top: 0;
+            right: 4rem;
+            z-index: 0;
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 65rem) {
+
+    .testimonial-grid {
+        margin: auto;
+        max-width: 70rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "daniel daniel jonathan kira"
+            "jeanette patrick patrick kira";
+        gap: 1.5rem 2rem;
+
+        .testimonial {
+            &--purple { grid-area: daniel; }
+            &--gray { grid-area: jonathan; }
+            &--white:nth-of-type(1) { grid-area: jeanette; }
+            &--blue { grid-area: patrick; }
+            &--white:last-of-type { grid-area: kira; }
+
+            .testimonial__quotation {
+                display: block;
+            }
+        }
+    }
+}
