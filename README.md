@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/zardrick/testimonials-grid-section)
-- Live Site URL: [Add live site URL here](https://zardrick.github.io/testimonials-grid-section)
+- Solution URL: [Github repository](https://github.com/zardrick/testimonials-grid-section)
+- Live Site URL: [Live Demo](https://zardrick.github.io/testimonials-grid-section)
 
 ## My process
 
